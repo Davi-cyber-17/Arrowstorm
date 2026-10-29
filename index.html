@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#060a14">
+<title>Arrowstorm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<div id="ui">
+  <div class="panel" id="p-main">
+    <h1>Arrow<span>storm</span></h1>
+    <p class="sub">DUELO DE ARCOS // 1-2 JOGADORES</p>
+    <button id="b-online">Modo Online</button>
+    <button id="b-local" class="alt">Modo Local</button>
+    <p class="hint"><b>Toque/celular:</b> arraste para girar o arco e solte para atirar.<br><b>Mouse:</b> mire com o cursor e clique.<br><b>Teclado:</b> ◀ ▶ (ou A D) giram, Espaço atira, Esc sai.<br><b>Regra:</b> 7 flechas por rodada. Quando as flechas de todos acabam, começa a próxima rodada.</p>
+  </div>
+  <div class="panel hidden" id="p-online">
+    <h2>Modo Online</h2>
+    <button id="b-create">Criar sala</button>
+    <button id="b-copy" class="alt hidden">Copiar link da sala</button>
+    <div class="or">ou entre em uma sala</div>
+    <input id="code" maxlength="4" placeholder="CÓDIGO" autocomplete="off" autocapitalize="characters">
+    <button id="b-join" class="alt">Entrar na sala</button>
+    <p id="msg"></p>
+    <button class="ghost back">Voltar</button>
+  </div>
+  <div class="panel hidden" id="p-local">
+    <h2>Modo Local</h2>
+    <button id="b-1p">1 Jogador (vs Bot)</button>
+    <button id="b-2p" class="alt">2 Jogadores (mesmo aparelho)</button>
+    <p class="hint">2 jogadores: cada um usa a sua metade da tela.<br>Teclado: A/D + S (embaixo) e ◀ ▶ + ▲ (em cima).</p>
+    <button class="ghost back">Voltar</button>
+  </div>
+  <div class="panel hidden" id="p-end">
+    <h2 id="end-t"></h2>
+    <button id="b-again">Jogar de novo</button>
+    <button class="ghost" id="b-menu">Menu</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
